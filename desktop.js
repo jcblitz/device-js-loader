@@ -1,0 +1,1 @@
+document.getElementById("target").innerHTML = "Some cool desktop stuff";

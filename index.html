@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Dynamic JS load test</title>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript">
+    device = DeviceDetect.whatIsIt();
+    DynamicScript.forDevice(device);
+  </script>
+  <style type="text/css">
+    #target {
+      padding: 20px;
+      background-color: #eee;
+      border-radius: 5px;
+    }
+  </style>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>Dynamic JS load test</h1>
+
+  <p>The first call in this script is to detect the device. It just randomly returns one of [phone, tablet, desktop].</p>
+  <p>The second call triggers the loading of the js specific for that device.</p>
+  <p>The script from each device type will update the text below saying which script was loaded. </p>
+
+  <div id="target"></div>
+
+</body>
+</html>
